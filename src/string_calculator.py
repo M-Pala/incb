@@ -1,4 +1,7 @@
+import re
+
 def add(numbers: str) -> int:
     if not numbers:
         return 0
-    return sum(map(int, numbers.split(',')))
+    parts = re.split(',|\n', numbers)
+    return sum(map(int, parts))
