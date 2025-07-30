@@ -31,3 +31,6 @@ def test_multiple_negatives_raise_exception_with_all_values():
 
 def test_ignore_numbers_greater_than_1000():
     assert add("2,1001,6") == 8
+
+def test_delimiters_of_any_length():
+    assert add("//[***]\n1***2***3") == 6
