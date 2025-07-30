@@ -28,3 +28,6 @@ def test_multiple_negatives_raise_exception_with_all_values():
     with pytest.raises(Exception) as e:
         add("-1,-2,3")
     assert str(e.value) == "negatives not allowed: -1,-2"
+
+def test_ignore_numbers_greater_than_1000():
+    assert add("2,1001,6") == 8
